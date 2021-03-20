@@ -33,7 +33,7 @@ define Device/cudy_wr1000
   IMAGES += factory.bin
   IMAGE/factory.bin := \
         $$(sysupgrade_bin) | check-size $$$$(IMAGE_SIZE) | jcg-header 92.122
-  JCG_MAXSIZE := 8060928
+  JCG_MAXSIZE := 7872k
   DEVICE_TITLE := Cudy WR1000
   DEVICE_PACKAGES := kmod-mt76x2
   SUPPORTED_DEVICES += wr1000
@@ -440,6 +440,7 @@ define Device/wiznet_wizfi630s
   DTS := WIZFI630S
   IMAGE_SIZE := $(ralink_default_fw_size_32M)
   DEVICE_TITLE := WIZnet WizFi630S
+  SUPPORTED_DEVICES += wizfi630s
 endef
 TARGET_DEVICES += wiznet_wizfi630s
 
